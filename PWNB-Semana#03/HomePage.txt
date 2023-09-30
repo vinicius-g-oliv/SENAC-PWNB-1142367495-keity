@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>    
+  <title>uPanalytics</title>
+  <style>
+    .login {
+    float: right; 
+    }
+
+    .login a {
+      padding: 14px 16px;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #6bbafa; 
+      overflow: hidden;
+    }
+
+    li {
+      float: left;
+      position: relative; 
+    }
+
+    li a {
+      display: block;
+      color: white; 
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: #8eb4ed;
+    }
+
+
+    .info-box {
+            display: none; 
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            top: 100%; 
+            left: 0;
+            width: 200px;
+            z-index: 1;
+        }
+
+        li:hover .info-box {
+            display: block; 
+        }
+
+    ul h1 {
+      margin: 0;
+      padding: 10px;
+      font-size: 24px;
+      color: white;
+    }
+    footer {
+    background-color: #6bbafa;
+    padding: 18px;
+    text-align: center;
+    color: white;
+     }
+  </style>
+</head>
+<body>
+  <ul>
+    <h1>uPanalytics</h1>	
+    <li><a href="#">Produtos</a></li>
+    <li><a href="#">Planos</a></li>
+    <li>
+      <a href="#">Aprenda</a>
+      <div class="info-box">
+        <!-- Conteúdo da caixa de informações para "Aprenda" -->
+        <p>Algumas informações sobre Aprenda...</p>
+      </div>
+    </li>
+    <li><a href="#">Contato</a></li>
+    <li class="login"><a href="#">Login</a></li>
+  </ul>
+  <br>
+  <section>
+    <p>No que somos especialistas?</p>
+    <canvas id="myCanvas" width="300" height="150" style="border:1px solid grey">   </canvas>
+    <canvas id="myCanvas" width="300" height="150" style="border:1px solid grey">   </canvas>
+    <canvas id="myCanvas" width="300" height="150" style="border:1px solid grey">   </canvas>
+  </section>
+  <section>
+    <p>Nossos Parceiros?</p>
+    <canvas id="myCanvas" width="300" height="150" style="border:1px solid grey">   </canvas>
+    <canvas id="myCanvas" width="300" height="150" style="border:1px solid grey">   </canvas>
+    <canvas id="myCanvas" width="300" height="150" style="border:1px solid grey">   </canvas>
+  </section>
+<br>
+  <footer>
+  <p></p>
+</footer>
+</body>
+</html>
