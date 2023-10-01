@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #6bbafa;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav {
+            background-color: #6bbafa;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+            position: relative;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #8eb4ed;
+        }
+
+        .info-box {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            top: 100%;
+            left: 0;
+            width: 200px;
+            z-index: 1;
+        }
+
+        li:hover .info-box {
+            display: block;
+        }
+
+        ul h1 {
+            margin: 0;
+            padding: 10px;
+            font-size: 24px;
+        }
+
+        .section-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .section {
+            flex: 0 0 calc(33.33% - 20px);
+            text-align: center;
+            border: 1px solid grey;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #6bbafa;
+            padding: 18px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Produtos</h1>
+    </header>
+    <br>
+    <div class="section-container">
+        <div class="section">
+            <h2>Seção 1</h2>
+            <p>Conteúdo da primeira seção aqui.</p>
+        </div>
+        <div class="section">
+            <h2>Seção 2</h2>
+            <p>Conteúdo da segunda seção aqui.</p>
+        </div>
+        <div class="section">
+            <h2>Seção 3</h2>
+            <p>Conteúdo da terceira seção aqui.</p>
+        </div>
+    </div>
+    <br>
+    <footer>
+        <p>Rodapé da página</p>
+    </footer>
+</body>
+</html>
