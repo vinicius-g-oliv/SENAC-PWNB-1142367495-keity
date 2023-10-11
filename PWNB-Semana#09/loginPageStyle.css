@@ -1,0 +1,90 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #6bbafa; 
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #d0dfe06b;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+ul h2 {
+    text-align: center;
+    color: #ffffff;
+}
+
+h2 {
+    text-align: center;
+    color: #6bbafa;
+}
+
+label {
+    display
+    y: block;
+    margin-bottom: 5px;
+    color: #6bbafa;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    width: 99%;
+    padding: 10px;
+    background-color: #6bbafa;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.container img {
+    display: block; 
+    margin: 0 auto; 
+}
+
+.centered-text {
+    text-align: center;
+    margin-top: 3px;
+    font-size: 12px; 
+    color: #6bbafa; 
+}
+
+.imagem-redimensionada {
+            width: 100px;
+            height: 100px;
+ }
+ 
+ .rounded-button {
+            background-color: #6bbafa;
+            padding: 15px 30px;
+            text-align: center;
+            color: white;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+        }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" type="text/css" href="cadastroPageStyle.css">
+    <script src="js/cadastro.js"></script>
+</head>
+<body>
+    <ul>
+        <h2>uPanalytics</h2>
+    </ul>
+    <div class="container">
+        <h2>Cadastre-se</h2>
+        
+        <br><br>
+        <form>
+            <div class="input-container">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="input-container">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" onblur="validarCPF(name)" required>
+            </div>
+            <div class="input-container">
+                <label for="rg">RG:</label>
+                <input type="text" id="rg" name="rg" required>
+            </div>
+            <div class="input-container">
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" name="email" onblur="validarEmail()" required>
+            </div>
+            <div class="input-container">
+                <label for="aniversario">Data de Nascimento:</label>
+                <input type="date" id="aniversario" name="aniversario" required>
+            </div>
+            <br></br>
+            <h2>Seu Negócio</h2>
+            <br></br>
+            <div class="input-container">
+                <label for="ramo">Ramo de Negócio:</label>
+                <input type="text" id="ramo" name="ramo" required>
+            </div>
+            <div class="input-container">
+                <label for="nomeEpresa">Nome da empresa:</label>
+                <input type="text" id="nomeEpresa" name="nomeEpresa" required>
+            </div>
+            <div class="input-container">
+                <label for="dataCriacao">Data de criação:</label>
+                <input type="date" id="dataCriacao" name="dataCriacao" required>
+            </div>
+            <div class="input-container">
+                <label for="cnpj">CNPJ:</label>
+                <input type="text" id="cnpj" name="cnpj" required>
+            </div>
+            <div class="input-container">
+                <label for="descricao">Descrição do negócio:</label>
+                <textarea id="descricao" name="descricao" rows="4" cols="50"></textarea>
+            </div>
+            <div class="input-container">
+                <label for="redes">Redes Sociais:</label>
+                <textarea id="redes" name="redes" rows="4" cols="50"></textarea>
+            </div>
+            <br></br>
+            <h2>Estamos quase lá!</h2>
+            <h2>Agora, cadastre uma senha.</h2>
+            <p class="password-instructions">A senha deve conter no mínimo 8 caracteres e pelo menos um caractere especial.</p>
+            <br></br>
+            <div class="input-container">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" onblur="verificarSenha(name)" required>
+            </div>
+            <br></br>
+            <button id="cadastrar" class="rounded-button" type="submit">CADASTRAR</button>
+        </form>
+         <div id="mensagemCadastro" style="display: none; color: green;">Usuário cadastrado com sucesso!</div>
+    </div>
+</body>
+</html>
