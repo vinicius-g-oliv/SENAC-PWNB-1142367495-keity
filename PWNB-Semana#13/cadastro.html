@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" type="text/css" href="cadastroPageStyle.css">
+    </head>
+<body>
+    <ul>
+        <h2>Formulário</h2>
+    </ul>
+    <div class="container">
+        <h2>Cadastre-se</h2>
+        
+        <br><br>
+        <form id="frm-cad-cliente">
+            <div class="input-container">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="input-container">
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" id="sobrenome" name="sobrenome" required>
+            </div>
+            <div class="input-container">
+                <label for="aniversario">Data de Nascimento:</label>
+                <input type="date" id="aniversario" name="aniversario" required>
+            </div>
+            <br></br>
+            <h2>Endereço</h2>
+            <br></br>
+            <div class="input-container">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" required>
+            </div>
+            <div class="input-container">
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" name="endereco" required>
+            </div>
+            <div class="input-container">
+                <label for="numero">Número:</label>
+                <input type="text" id="numero" name="numero" required>
+            </div>
+            <div class="input-container">
+                <label for="uf">UF:</label>
+                <input type="text" id="uf" name="uf" required>
+            </div>
+            <br></br>
+            <button id="adicionar" class="rounded-button" type="submit">ADICIONAR CLIENTE</button>
+            <br></br>
+            <button id="listar" class="rounded-button">LISTAR CLIENTES</button>
+		</form>
+		
+    </div>
+    <span id="dadosIncluidos"></span>
+		<script>
+			document.addEventListener("DOMContentLoaded", function (event) {
+						//localStorage.clear()                                                                        
+						localStorage.removeItem("clientes")                                          
+			})                                                                                                                         
+		   
+			var frmCadCliente = document.getElementById("frm-cad-cliente");
+			frmCadCliente.addEventListener("submit", (e) => {
+				e.preventDefault();
+				//receber dados do formulario
+				console.log("entrei no cadastro de cliente");
+				var frmNomeCliente = document.getElementById("nome").value
+				var frmSobrenomeCliente = document.getElementById("sobrenome").value
+				var frmAniversarioCliente = document.getElementById("aniversario").value
+				var frmCepCliente = document.getElementById("cep").value
+				var frmEnderecoCliente = document.getElementById("endereco").value
+				var frmNumCliente = document.getElementById("numero").value
+				var frmUFCliente = document.getElementById("uf").value
+				
+				//criar array de objetos
+				var clientes = new Array();
+				//verifica se já existe localstorage gravada
+				if (localStorage.hasOwnProperty("clientes")) {
+					//recuperar valores da propriedade clientes (localstorage)
+					//Converte a string para Object
+					clientes = JSON.parse( localStorage.getItem("clientes"))
+				}
+				//Vamos adicionar novo objeto ao Array criado
+				clientes.push({
+					nomeCliente: frmNomeCliente,
+					sobrenomeCliente: frmSobrenomeCliente,
+					aniversarioCliente: frmAniversarioCliente,
+					cepCliente: frmCepCliente,
+					enderecoCliente: frmEnderecoCliente,
+					numeroCliente: frmNumCliente,
+					ufCliente: frmUFCliente
+					})
+				//precisamos conver a string em objeto
+				//vamos salvar em LocalStorage
+				localStorage.setItem("clientes",JSON.stringify(clientes))
+				//Monstrando os dados
+				document.getElementById("dadosIncluidos").insertAdjacentHTML('beforeend',"Nome: "+frmNomeCliente+"<br>Sobrenome: "+frmSobrenomeCliente+"<br>Data de aniversario: "+frmAniversarioCliente+"<br>CEP: "+frmCepCliente+"<br>Endereço: "+frmEnderecoCliente+"<br>Número: "+frmNumCliente+"<br>UF: "+frmUFCliente+"<br><hr>")
+				console.log("passei pelos dados incluidos");
+			})
+		</script>
+</body>
+</html>
